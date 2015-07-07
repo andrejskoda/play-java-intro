@@ -1,5 +1,5 @@
-New log file opened at Tue Jul 07 09:30:15 CEST 2015 by 16578@think
-jvm 16578@think
+New log file opened at Tue Jul 07 12:31:44 CEST 2015 by 24851@think
+jvm 24851@think
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /home/andrej/play-java-intro/project, returning: (play-java-intro-build)
 Loading project definition from /home/andrej/play-java-intro/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@9e91d31, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1ec9f523, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,7 +69,7 @@ Set current project to play-java-intro (in build file:/home/andrej/play-java-int
 > server-handle-next-server-request
 > {file:/home/andrej/play-java-intro/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@138b5a06, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@39e25b66, check cycles: false
 Read from stdout: Updating {file:/home/andrej/play-java-intro/}root...
 Updating {file:/home/andrej/play-java-intro/}root...
 Other repositories:
@@ -84,7 +84,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.10.4 ...
 Resolving org.scala-lang#scala-library;2.10.4 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1b1bc022
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@195a94a4
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 	[2.10.4] org.scala-lang#scala-library;2.10.4
@@ -7771,7 +7771,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] org.scala-sbt#control;0.13.8-M3!control.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.8!akka-actor_2.10.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.10;2.3.8!akka-testkit_2.10.jar
-:: resolution report :: resolve 7970ms :: artifacts dl 176ms
+:: resolution report :: resolve 8109ms :: artifacts dl 247ms
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT compile produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-compile.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT runtime produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-runtime.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT test produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-test.xml
@@ -7786,7 +7786,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT pom produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-pom.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT scala-tool produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-scala-tool.xml
 	report for play-java-intro#play-java-intro_2.10;1.0-SNAPSHOT fork-run produced in /home/andrej/play-java-intro/target/resolution-cache/reports/play-java-intro-play-java-intro_2.10-fork-run.xml
-	resolve done (7970ms resolve - 176ms download)
+	resolve done (8109ms resolve - 247ms download)
 Read from stdout: Done updating.
 Done updating.
 Read from stdout: Scala version was updated by one of library dependencies:
@@ -7799,18 +7799,18 @@ Read from stdout: 	ivyScala := ivyScala.value map { _.copy(overrideScalaVersion 
 	ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 Read from stdout: Run 'evicted' to see detailed eviction warnings
 Run 'evicted' to see detailed eviction warnings
-Total time: 10 s, completed Jul 7, 2015 9:36:18 AM
+Total time: 10 s, completed Jul 7, 2015 12:36:19 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@55ee739e, check cycles: false
-Total time: 0 s, completed Jul 7, 2015 9:36:21 AM
+Running task... Cancel: sbt.server.ServerTaskCancellation@7f687317, check cycles: false
+Total time: 0 s, completed Jul 7, 2015 12:36:21 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/home/andrej/play-java-intro/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@23f72236, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@110afc53, check cycles: false
 SLF4J: The following set of substitute loggers may have been accessed
 SLF4J: during the initialization phase. Logging calls during this
 SLF4J: phase were not honored. However, subsequent logging calls to these
@@ -7839,6 +7839,6 @@ Copy resource mappings:
 	(/home/andrej/play-java-intro/conf/logback.xml,/home/andrej/play-java-intro/target/scala-2.10/classes/logback.xml)
 	(/home/andrej/play-java-intro/conf/application.conf,/home/andrej/play-java-intro/target/scala-2.10/classes/application.conf)
 	(/home/andrej/play-java-intro/conf/META-INF/persistence.xml,/home/andrej/play-java-intro/target/scala-2.10/classes/META-INF/persistence.xml)
-Total time: 3 s, completed Jul 7, 2015 9:36:40 AM
+Total time: 2 s, completed Jul 7, 2015 12:36:39 PM
 > server-post-command-cleanup
 > server-handle-next-server-request
