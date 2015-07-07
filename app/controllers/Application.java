@@ -49,4 +49,11 @@ public class Application extends Controller {
         List<Office> offices = (List<Office>) JPA.em().createQuery("select p from Office p").getResultList();
         return ok(toJson(offices));
     }
+
+    @Transactional(readOnly = true)
+    public Result getOffice(String officeId) {
+        Office office =JPA.em().find(Office.class,officeId);
+//        Office office = (Office) JPA.em().createQuery("select p from Office p w").getSingleResult();
+        return ok(toJson(office));
+    }
 }
