@@ -6,7 +6,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 libraryDependencies ++= Seq(
   javaJpa,
-  "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final"
+  "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
+  "org.webjars" % "angularjs" % "1.4.1"
 )     
 
 // Play provides two styles of routers, one expects its actions to be injected, the

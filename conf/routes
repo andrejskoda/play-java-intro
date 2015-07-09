@@ -3,11 +3,12 @@
 # ~~~~
 
 # Home page
-GET         /                    controllers.Application.index()
-POST        /person              controllers.Application.addPerson()
-GET         /persons             controllers.Application.getPersons
-GET         /offices             controllers.Application.getOffices
-GET         /offices/:officeId   controllers.Application.getOffice(officeId)
+GET         /                         controllers.Application.index()
+#GET        /app                         controllers.Assets.at(path="/public", file="/index.html")
+#POST        /person                   controllers.Application.addPerson()
+#GET         /persons                  controllers.Application.getPersons
+GET        /api/offices                  controllers.Application.getOffices
+GET        /api/offices/:officeId        controllers.Application.getOffice(officeId)
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /assets/*file             controllers.Assets.at(path="/public", file)

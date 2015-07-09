@@ -1,12 +1,7 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-import play.db.jpa.*;
-import views.html.*;
 import models.Office;
 import models.Person;
-import play.data.Form;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import play.mvc.Controller;
@@ -15,7 +10,7 @@ import views.html.index;
 
 import java.util.List;
 
-import static play.libs.Json.*;
+import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
@@ -23,12 +18,12 @@ public class Application extends Controller {
         return ok(index.render());
     }
 
-    @Transactional
-    public Result addPerson() {
-        Person person = Form.form(Person.class).bindFromRequest().get();
-        JPA.em().persist(person);
-        return redirect(routes.Application.index());
-    }
+//    @Transactional
+//    public Result addPerson() {
+//        Person person = Form.form(Person.class).bindFromRequest().get();
+//        JPA.em().persist(person);
+//        return redirect(routes.Application.index());
+//    }
 
     @Transactional(readOnly = true)
     public Result getPersons() {
@@ -36,17 +31,18 @@ public class Application extends Controller {
         return ok(toJson(persons));
     }
 
-    @Transactional
-    public Result addOffices() {
-        Office office = new Office();
-        office.name="testName";
-        JPA.em().persist(office);
-        return redirect(routes.Application.index());
-    }
+//    @Transactional
+//    public Result addOffices() {
+//        Office office = new Office();
+//        office.name="testName";
+//        JPA.em().persist(office);
+//        return redirect(routes.Application.index());
+//    }
 
     @Transactional(readOnly = true)
     public Result getOffices() {
         List<Office> offices = (List<Office>) JPA.em().createQuery("select p from Office p").getResultList();
+        response().setHeader(ACCESS_CONTROL_ALLOW_ORIGIN,"*");
         return ok(toJson(offices));
     }
 
@@ -54,6 +50,7 @@ public class Application extends Controller {
     public Result getOffice(String officeId) {
         Office office =JPA.em().find(Office.class,officeId);
 //        Office office = (Office) JPA.em().createQuery("select p from Office p w").getSingleResult();
+        response().setHeader(ACCESS_CONTROL_ALLOW_ORIGIN,"*");
         return ok(toJson(office));
     }
 }

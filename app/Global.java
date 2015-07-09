@@ -65,3 +65,6 @@ public class Global extends GlobalSettings {
         return null;
     }
 }
+
+//BufferedReader in
+//        = new BufferedReader(new FileReader("foo.in"));
