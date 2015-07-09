@@ -1,0 +1,23 @@
+<h2>
+	Stories
+</h2>
+
+<p><input type="search" class="form-control" placeholder="Search" ng-model="query"></p>
+<table class="table table-hover table-bordered">
+	<thead>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th ng-click="sort()">
+			Address
+			<span ng-show='!sort.order' class='glyphicon glyphicon-chevron-down'></span>
+			<span ng-show='sort.order' class='glyphicon glyphicon-chevron-up'></span>
+		</th>
+	</tr>
+	</thead>
+	<tr ng-repeat="story in stories">
+		<td> {{ story['DisNameLang']}} </td>
+		<td> {{ story['DisPlz']}} - {{ story['DisOrt']}} </td>
+	</tr>
+</table>
