@@ -11,6 +11,7 @@ import play.Logger;
 import play.db.jpa.JPA;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
@@ -55,6 +56,7 @@ public class Global extends GlobalSettings {
 
             URL url = new URL("https://service.bmf.gv.at/Finanzamtsliste.json");
             BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(),"UTF-8"));
+//            BufferedReader in = new BufferedReader(new FileReader("/home/andrej/temp/Finanzamtsliste.json"));
 //            Office[] offices = mapper.readValue(url, Office[].class);
             Office[] offices = mapper.readValue(in, Office[].class);
             Logger.info("### size: "+ offices.length);
@@ -66,5 +68,3 @@ public class Global extends GlobalSettings {
     }
 }
 
-//BufferedReader in
-//        = new BufferedReader(new FileReader("foo.in"));

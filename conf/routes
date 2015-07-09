@@ -3,8 +3,8 @@
 # ~~~~
 
 # Home page
-GET         /                         controllers.Application.index()
-#GET        /app                         controllers.Assets.at(path="/public", file="/index.html")
+#GET         /                         controllers.Application.index()
+GET        /                         controllers.Assets.at(path="/public", file="/index.html")
 #POST        /person                   controllers.Application.addPerson()
 #GET         /persons                  controllers.Application.getPersons
 GET        /api/offices                  controllers.Application.getOffices
