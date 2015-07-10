@@ -11,9 +11,9 @@ import play.Logger;
 import play.db.jpa.JPA;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,9 +55,7 @@ public class Global extends GlobalSettings {
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
             URL url = new URL("https://service.bmf.gv.at/Finanzamtsliste.json");
-            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(),"UTF-8"));
-//            BufferedReader in = new BufferedReader(new FileReader("/home/andrej/temp/Finanzamtsliste.json"));
-//            Office[] offices = mapper.readValue(url, Office[].class);
+            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(), Charset.forName("ISO-8859-1")));
             Office[] offices = mapper.readValue(in, Office[].class);
             Logger.info("### size: "+ offices.length);
             return offices;
